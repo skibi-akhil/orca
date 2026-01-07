@@ -3,6 +3,33 @@
  * Neo-Brutalism Interactive Features
  */
 
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Load saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  body.classList.add('light-theme');
+  themeToggle.checked = false;
+} else {
+  body.classList.remove('light-theme');
+  themeToggle.checked = true;
+}
+
+// Theme toggle event listener
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    // Dark theme (moon)
+    body.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    // Light theme (sun)
+    body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light');
+  }
+});
+
 // Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.getElementById('nav-menu');
