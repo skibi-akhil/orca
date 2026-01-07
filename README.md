@@ -69,9 +69,9 @@ git clone https://github.com/skibi-akhil/orca.git
 cd orca
 
 # Open in browser
-start !DOCTYPE.html   # Windows
-open !DOCTYPE.html    # macOS
-xdg-open !DOCTYPE.html # Linux
+start index.html   # Windows
+open index.html    # macOS
+xdg-open index.html # Linux
 ```
 
 ---
@@ -80,7 +80,7 @@ xdg-open !DOCTYPE.html # Linux
 
 ```
 orca/
-├── !DOCTYPE.html      # Main HTML file (all-in-one)
+├── index.html         # Main HTML file (all-in-one)
 ├── orca-logo.png      # Cyan orca logo icon
 ├── favicon.png        # Browser favicon
 ├── og-image.png       # Social media preview card
